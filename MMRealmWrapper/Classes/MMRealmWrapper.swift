@@ -10,7 +10,7 @@ import RealmSwift
 import RealmManager
 import Realm
 
-class Database: NSObject {
+class MMRealmWrapper: NSObject {
     
     static let shared = Database()
     
