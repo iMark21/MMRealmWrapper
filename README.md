@@ -22,7 +22,9 @@ pod 'MMRealmWrapper'
 
 1.- Parameter version: version number of your DB. Increment your version number when you have to update your db file.
 
-```swift public func configureDB(version: UInt64) ```
+    ```swift
+    public func configureDB(version: UInt64) 
+    ```
     
 ### Initialize SHARED DB
 
@@ -34,7 +36,8 @@ pod 'MMRealmWrapper'
 
 1.  - Save Realm Object
     ```swift
-    public func save(T: Object)```
+    public func save(T: Object)
+    ```
     
 2.  - Save Realm Object with completion: returns success or not for this task.
     ```swift
