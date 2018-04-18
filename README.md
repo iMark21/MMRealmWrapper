@@ -18,20 +18,20 @@ pod 'MMRealmWrapper'
 ```
 ## How it works
 
-# Initialize DB
+### Initialize DB
 
 1.- Parameter version: version number of your DB. Increment your version number when you have to update your db file.
     ```swift
     public func configureDB(version: UInt64) ```
     
-# Initialize SHARED DB
+### Initialize SHARED DB
 
 1.- ApplicationGroupIdentifier: Application Security Group Identifier defined on iTunesConnect account like app.identifier.com
 2.- version: version number of your DB. Increment your version number when you have to update your db file.   
     ```swift
     public configureSharedDB(ApplicationGroupIdentifier:String, version: UInt64)```
 
-# Save or Update Objects
+### Save or Update Objects
 
 1.  - Save Realm Object
     ```swift
@@ -45,7 +45,7 @@ pod 'MMRealmWrapper'
     ```swift
     public func saveArrayObjects(T: [Object], completion: @escaping (_ success : Bool) -> Void) ```
 
-# Get Objects
+### Get Objects
 
 1.  - Get array of objects by class
     ```swift
@@ -63,7 +63,7 @@ pod 'MMRealmWrapper'
     ```swift
     public func getFetchList(T: Object, condition: String?, completionHandler: @escaping(_ result:[Object]) -> Void)```
     
-# Delete Objects
+### Delete Objects
 
 1.  - Delete object providing Identifier
     ```swift
