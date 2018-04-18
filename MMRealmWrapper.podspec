@@ -28,12 +28,12 @@ s.author = { "Míchel Marqués" => "marques.jm@icloud.com" }
 s.homepage = "https://twitter.com/michelmarques21"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/iMark21/MMRealmWrapper", :tag => "#{s.version}"}
+s.source = { :git => "https://github.com/iMark21/MMRealmWrapper", :tag => s.version}
 
 # 7
 s.dependency 'RealmManager', '~> 1.0.8'
 
 # 8
-s.source_files = "MMRealmWrapper/**/*"
+s.source_files = 'MMRealmWrapper/Classes/**/*.{swift}'
 
 end
