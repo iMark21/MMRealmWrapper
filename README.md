@@ -20,18 +20,17 @@ pod 'MMRealmWrapper'
 
 ### Initialize DB
 
-1.- Parameter version: version number of your DB. Increment your version number when you have to update your db file.
+1. - Parameter version: version number of your DB. Increment your version number when you have to update your db file.
 
-    ```ruby
+    ```swift
     public func configureDB(version: UInt64) 
     ```
     
 ### Initialize SHARED DB
 
-1.- ApplicationGroupIdentifier: Application Security Group Identifier defined on iTunesConnect account like app.identifier.com
-2.- version: version number of your DB. Increment your version number when you have to update your db file.
+1. - ApplicationGroupIdentifier: Application Security Group Identifier defined on iTunesConnect account like app.identifier.com. Version:number of your DB. Increment your version number when you have to update your db file.
 
-    ```ruby 
+    ```swift
     public configureSharedDB(ApplicationGroupIdentifier:String, version: UInt64)
     ```
 
