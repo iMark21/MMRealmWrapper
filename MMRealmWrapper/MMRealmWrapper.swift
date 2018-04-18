@@ -12,7 +12,7 @@ import Realm
 
 class MMRealmWrapper: NSObject {
     
-    static let shared = Database()
+    static let shared = MMRealmWrapper()
     
     /// Initializate DB default
     ///
