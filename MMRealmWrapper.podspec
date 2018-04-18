@@ -34,6 +34,6 @@ s.source = { :git => "https://github.com/iMark21/MMRealmWrapper", :tag => "#{s.v
 s.dependency 'RealmManager', '~> 1.0.8'
 
 # 8
-s.source_files = "MMRealmWrapper/**/*"
+s.source_files = "MMRealmWrapper/**/*.{swift}"
 
 end
