@@ -21,7 +21,9 @@ pod 'MMRealmWrapper'
 ### Initialize DB
 
 1.- Parameter version: version number of your DB. Increment your version number when you have to update your db file.
-    ```swift public func configureDB(version: UInt64) ```
+    ```
+    swift public func configureDB(version: UInt64)
+    ```
     
 ### Initialize SHARED DB
 
