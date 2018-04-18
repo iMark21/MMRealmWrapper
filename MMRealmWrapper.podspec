@@ -10,30 +10,18 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
+s.swift_version = '3.0'
 s.ios.deployment_target = '9.0'
 s.name = "MMRealmWrapper"
+s.license = 'MIT'
 s.summary = "An easy way to manage your Realm Database with Swift"
 s.requires_arc = true
-
-# 2
-s.version = "0.2.0"
-
-# 3
+s.version = "0.3.0"
 s.license = { :type => "MIT", :file => "LICENSE" }
-
-# 4 - Replace with your name and e-mail address
 s.author = { "Míchel Marqués" => "marques.jm@icloud.com" }
-
-# 5 - Replace this URL with your own Github page's URL (from the address bar)
 s.homepage = "https://twitter.com/michelmarques21"
-
-# 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/iMark21/MMRealmWrapper", :tag => s.version}
-
-# 7
+s.source = { :git => "https://github.com/iMark21/MMRealmWrapper.git", :tag => s.version}
 s.dependency 'RealmManager', '~> 1.0.8'
-
-# 8
-s.source_files = 'MMRealmWrapper/Classes/**/*.{swift}'
+s.source_files = 'MMRealmWrapper/Classes/**/*.swift'
 
 end
