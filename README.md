@@ -1,7 +1,7 @@
 # MMRealmWrapper
 An easy way to manage your Realm Database with Swift
 
-This library uses library from [RealmManager](https://github.com/markcdb/RealmManager) by [markcdb](https://github.com/markcdb) - trying to make it easier to manager your own databases with REALM. 
+This library uses library from [RealmManager](https://github.com/markcdb/RealmManager) by [markcdb](https://github.com/markcdb) - trying to make it easier to manage your own databases with REALM. 
 
 ## Requirements
 
@@ -14,7 +14,7 @@ MMRealmWrapper is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MMTouchIDManager'
+pod 'MMRealmWrapper'
 ```
 
 ## Author
