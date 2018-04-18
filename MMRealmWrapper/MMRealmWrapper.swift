@@ -1,5 +1,5 @@
 //
-//  Database.swift
+//  MMRealmWrapper.swift
 //
 //  Created by Juan Miguel Marques Morilla on 15/2/18.
 //  Copyright © 2018 Juan Miguel Marqués Morilla. All rights reserved.
@@ -10,9 +10,9 @@ import RealmSwift
 import RealmManager
 import Realm
 
-class MMRealmWrapper: NSObject {
+public class MMRealmWrapper: NSObject {
     
-    static let shared = MMRealmWrapper()
+    public static let shared = MMRealmWrapper()
     
     /// Initializate DB default
     ///
