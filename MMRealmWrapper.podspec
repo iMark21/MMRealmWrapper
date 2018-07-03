@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.swift_version = '3.0'
+s.swift_version = '4.0'
 s.ios.deployment_target = '9.0'
 s.name = "MMRealmWrapper"
 s.license = 'MIT'
@@ -21,7 +21,7 @@ s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Míchel Marqués" => "marques.jm@icloud.com" }
 s.homepage = "https://twitter.com/michelmarques21"
 s.source = { :git => "https://github.com/iMark21/MMRealmWrapper.git", :tag => s.version}
-s.dependency 'RealmManager', '~> 1.0.8'
+s.dependency 'RealmManager', '~> 1.0.9'
 s.source_files = 'MMRealmWrapper/**/*.swift'
 
 end
