@@ -20,13 +20,8 @@ s.version = "0.3.4"
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Míchel Marqués" => "marques.jm@icloud.com" }
 s.homepage = "https://twitter.com/michelmarques21"
-<<<<<<< HEAD
 s.source = { :git => "https://github.com/iMark21/MMRealmWrapper.git", :tag => s.version}
 s.dependency 'RealmManager', '~> 1.0.9'
-=======
-s.source = { :git => "https://github.com/iMark21/MMRealmWrapper.git", :branch => "master", :tag => s.version.to_s }
-s.dependency 'RealmManager', '~> 1.0.8'
->>>>>>> 1ae65740990758f9519916326d59ada2e363ddb8
 s.source_files = 'MMRealmWrapper/**/*.swift'
 
 end
