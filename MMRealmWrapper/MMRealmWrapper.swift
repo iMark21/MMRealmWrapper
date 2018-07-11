@@ -33,7 +33,7 @@ public class MMRealmWrapper: NSObject {
     /// - Parameters:
     ///   - ApplicationGroupIdentifier: Application Security Group Identifier defined on iTunesConnect account like app.identifier.com
     ///   - version: version number of your DB. Increment your version number when you have to update your db file.
-    func configureSharedDB(ApplicationGroupIdentifier:String, version: UInt64){
+    public func configureSharedDB(ApplicationGroupIdentifier:String, version: UInt64){
         let AppGroupContainerUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: ApplicationGroupIdentifier)
         let realmPath = AppGroupContainerUrl?.appendingPathComponent("db.realm")
         var config = Realm.Configuration(schemaVersion: version, migrationBlock: { migration, oldSchemaVersion in
