@@ -51,7 +51,7 @@ public class MMRealmWrapper: NSObject {
     ///
     /// - Parameter T: Realm Object
     public func save(T: Object)  {
-        RealmManager.addOrUpdate(model: String(describing: T.self), object: T, completionHandler: { (error) in
+        RealmManager.addOrUpdate(model: String(describing: T.classForCoder), object: T, completionHandler: { (error) in
         })
     }
     
@@ -64,7 +64,7 @@ public class MMRealmWrapper: NSObject {
         if T == nil {
             completion (false)
         }
-        RealmManager.addOrUpdate(model: String(describing: T.self), object: T, completionHandler: { (error) in
+        RealmManager.addOrUpdate(model: String(describing: T?.classForCoder), object: T, completionHandler: { (error) in
             if (error == nil){
                 completion (true)
             }else{
@@ -82,12 +82,14 @@ public class MMRealmWrapper: NSObject {
     public func saveArrayObjects(T: [Object], completion: @escaping (_ success : Bool) -> Void) {
         let numberObjects : Int = T.count
         var savedObjects : Int = 0
-        RealmManager.addOrUpdate(model: String(describing: T.self), object: T, completionHandler: { (error) in
-            savedObjects = savedObjects+1
-            if (savedObjects == numberObjects) {
-                completion (true)
-            }
-        })
+        for object in T {
+            RealmManager.addOrUpdate(model: String(describing: object.classForCoder), object: object, completionHandler: { (error) in
+                savedObjects = savedObjects+1
+                if (savedObjects == numberObjects) {
+                    completion (true)
+                }
+            })
+        }
     }
     
     
@@ -213,7 +215,7 @@ public class MMRealmWrapper: NSObject {
                 }else{
                     condition = "id == \(objectID)"
                 }
-                RealmManager.delete(model: String(describing: T.self), condition: condition, completionHandler: { (error) in
+                RealmManager.delete(model: String(describing: T.classForCoder), condition: condition, completionHandler: { (error) in
                     if (error == nil){
                         completionHandler (true)
                     }else{
@@ -245,7 +247,7 @@ public class MMRealmWrapper: NSObject {
                 }else{
                     condition = "\(objectPrimaryKey) == '\(objectPrimaryKeyValue)'"
                 }
-                RealmManager.delete(model: String(describing: T.self), condition: condition, completionHandler: { (error) in
+                RealmManager.delete(model: String(describing: T.classForCoder), condition: condition, completionHandler: { (error) in
                     if (error == nil){
                         completionHandler (true)
                     }else{
@@ -297,6 +299,15 @@ public class MMRealmWrapper: NSObject {
                 realm.delete(allObjects)
                 completionHandler (true)
             })
+        }
+    }
+    
+    /// Delete all database
+    ///
+    public func deleteAllDataBase(){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
         }
     }
     
