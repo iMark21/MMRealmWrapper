@@ -38,12 +38,12 @@ pod 'MMRealmWrapper'
 
 1.  - Save Realm Object
     ```swift
-    public func save(T: Object)
+    public func save(T: Object) 
     ```
     
 2.  - Save Realm Object with completion: returns success or not for this task.
     ```swift
-    public func saveWithCompletion(T: Object?, completion: @escaping (_ success : Bool) -> Void) 
+    public func saveWithCompletion(T: Object?, completion: @escaping (_ success : Bool) -> Void)
     ```
     
 3.  - Save an Array of Realm Objects with completion: returns success or not for this task.
@@ -55,7 +55,7 @@ pod 'MMRealmWrapper'
 
 1.  - Get array of objects by class
     ```swift
-    public func getAllListOf(T: Object, completionHandler: @escaping(_ result:[Object]) -> Void)
+    public func getAllListOf(T: Object, completionHandler: @escaping(_ result:[Object]) -> Void) 
     ```
     
 2.  - Get unique object by Identifier
@@ -98,6 +98,11 @@ pod 'MMRealmWrapper'
 5.  - Delete object providing a object
     ```swift
     public func deleteObjectWithCompletion(T: Object, completionHandler: @escaping(_ success:Bool) -> Void)
+    ```
+    
+6.  - Delete all database
+    ```swift
+    public func deleteAllDataBase()
     ```
 
 ## Author
