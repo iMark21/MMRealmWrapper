@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 # 1
 s.platform = :ios
 s.swift_version = '4.0'
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '8.0'
 s.name = "MMRealmWrapper"
 s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.summary = "An easy way to manage your Realm Database with Swift"
