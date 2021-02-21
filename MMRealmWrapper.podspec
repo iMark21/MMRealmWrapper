@@ -16,12 +16,12 @@ s.name = "MMRealmWrapper"
 s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.summary = "An easy way to manage your Realm Database with Swift"
 s.requires_arc = true
-s.version = "0.3.8"
+s.version = "0.3.9"
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Míchel Marqués" => "marques.jm@icloud.com" }
 s.homepage = "https://twitter.com/michelmarques21"
 s.source = { :git => "https://github.com/iMark21/MMRealmWrapper.git", :tag => s.version}
-s.dependency 'RealmManager', '~> 1.0.9'
+s.dependency 'RealmManager', '~> 1.1.0'
 s.source_files = 'MMRealmWrapper/**/*.swift'
 
 end
